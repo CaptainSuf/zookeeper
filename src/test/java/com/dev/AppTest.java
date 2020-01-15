@@ -25,7 +25,7 @@ public class AppTest {
 
     @Test
     public void update()throws Exception {
-        zooKeeper.setData("/test/c","abcd".getBytes(),-1);
+        zooKeeper.setData("/test/c","88888".getBytes(),-1);
     }
 
     @Test
