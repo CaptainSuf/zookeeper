@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: zkclient
+server:
+  port: 8080
+
+zookeeper:
+  hostlist: 192.168.99.100:2181
