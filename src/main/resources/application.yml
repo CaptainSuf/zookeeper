@@ -5,4 +5,4 @@ server:
   port: 8080
 
 zookeeper:
-  hostlist: 192.168.99.100:2181
+  hostlist: 127.0.0.1:2181
