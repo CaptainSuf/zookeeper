@@ -6,3 +6,9 @@ server:
 
 zookeeper:
   hostlist: 192.168.99.100:2181
+  session:
+    timeout: 30000
+  connection:
+    timeout: 3000
+  baseSleepTimeMs: 1000
+  maxRetries: 3
