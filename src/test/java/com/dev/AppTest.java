@@ -1,10 +1,9 @@
 package com.dev;
 
-import static org.junit.Assert.assertTrue;
-
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.ZooKeeper;
+import org.apache.zookeeper.data.Stat;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +34,9 @@ public class AppTest {
 
     @Test
     public void getData()throws Exception{
-        byte[] data = zooKeeper.getData("/test/c",false,null);
+        Stat stat = new Stat();
+        byte[] data = zooKeeper.getData("/test/c",false,stat);
         System.out.println(new String(data));
+        System.out.println("version:"+stat.getVersion());
     }
 }
