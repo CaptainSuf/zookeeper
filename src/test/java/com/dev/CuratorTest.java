@@ -47,7 +47,7 @@ public class CuratorTest {
         Stat stat = new Stat();
         byte[] data = client.getData().storingStatIn(stat).forPath("/c");
         System.out.println("data:"+new String(data));
-        System.out.println("vsrsion:"+stat.getVersion());
+        System.out.println("version:"+stat.getVersion());
     }
 
     @Test
